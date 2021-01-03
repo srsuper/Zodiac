@@ -81,9 +81,7 @@
 			  .text {font-size: 11px}
 			}
 			</style>
-				<style>
-                     .mySlides {display:none;}
-                      </style>
+		
 	</head>
 	<body>
 
@@ -182,40 +180,59 @@
 							</script>
 						<!-- 2 Column Video Section -->
 						<header class="align-center">
-							<h2>Events</h2>
-							<p>Events ที่จะถึง เร็วๆนี้</p>
+							<h2>Promotion</h2>
+							<p>Promotion !!</p>
 						</header>
-							<div class="flex flex-1">
-								
-									<div class="video col" style="max-width:500px">
-  <img class="mySlides" src="images/11.jpg" style="width:100%">
-  <img class="mySlides" src="images/22.jpg" style="width:100%">
-  <img class="mySlides" src="images/33.jpg" style="width:100%">
-                </div>
+						<div class="slideshow-container">
 
-      <script>
-   var myIndex = 0;
-  carousel();
-
-  function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-  }
-   </script>
-									<!--<center><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzodiacrangsit%2Fposts%2F1797988600363904&width=100% &show_text=false&appId=2004937082977075&height=500" width="100%" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></center>
-								</div>
-								<div class="video col">
-									<center><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzodiacrangsit%2Fposts%2F1800169400145824&width=100% &show_text=false&appId=2004937082977075&height=500" width="100%" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></center>
-								</div>-->
-												
-					</div>
+							<div class="mySlides fade">
+							  <div class="numbertext">1 / 3</div>
+							  <img src="images/11.jpg" style="width:100%">
+							  <div class="text">Promotion-1</div>
+							</div>
+							
+							<div class="mySlides fade">
+							  <div class="numbertext">2 / 3</div>
+							  <img src="images/22.jpg" style="width:100%">
+							  <div class="text">Promotion-2</div>
+							</div>
+							
+							<div class="mySlides fade">
+							  <div class="numbertext">3 / 3</div>
+							  <img src="images/33.jpg" style="width:100%">
+							  <div class="text">Promotion-3</div>
+							</div>
+							
+							</div>
+							<br>
+							
+							<div style="text-align:center">
+							  <span class="dot"></span> 
+							  <span class="dot"></span> 
+							  <span class="dot"></span> 
+							</div>
+							
+							<script>
+							var slideIndex = 0;
+							showSlides();
+							
+							function showSlides() {
+							  var i;
+							  var slides = document.getElementsByClassName("mySlides");
+							  var dots = document.getElementsByClassName("dot");
+							  for (i = 0; i < slides.length; i++) {
+								slides[i].style.display = "none";  
+							  }
+							  slideIndex++;
+							  if (slideIndex > slides.length) {slideIndex = 1}    
+							  for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+							  }
+							  slides[slideIndex-1].style.display = "block";  
+							  dots[slideIndex-1].className += " active";
+							  setTimeout(showSlides, 2000); // Change image every 2 seconds
+							}
+							</script>
 				</section>
 
 			<!-- Two -->
