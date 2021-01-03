@@ -81,19 +81,9 @@
 			  .text {font-size: 11px}
 			}
 			</style>
-				<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-				<script type="text/javascript" src="facebookPhotoAlbum.js"></script>
-			
-				<script type="text/javascript">
-				$(document).ready(function()
-				{
-					$("#facebook").facebookPhotoAlbum({
-						'facebookAlbumId' : 'a.1793932344102863',
-						'photoLimit'       : '10',
-						'randomOrder'      : 'true'
-					});
-				});
-				</script>
+				<style>
+                     .mySlides {display:none;}
+                      </style>
 	</head>
 	<body>
 
@@ -195,14 +185,36 @@
 							<h2>Events</h2>
 							<p>Events ที่จะถึง เร็วๆนี้</p>
 						</header>
-							<div class="flex flex-2">
-								<div class="video col">
-									<center><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzodiacrangsit%2Fposts%2F1797988600363904&width=100% &show_text=false&appId=2004937082977075&height=500" width="100%" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></center>
+							<div class="flex flex-1">
+								
+									<div class="video col" style="max-width:500px">
+  <img class="mySlides" src="img_la.jpg" style="width:100%">
+  <img class="mySlides" src="img_ny.jpg" style="width:100%">
+  <img class="mySlides" src="img_chicago.jpg" style="width:100%">
+                </div>
+
+      <script>
+   var myIndex = 0;
+  carousel();
+
+  function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+   </script>
+									<!--<center><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzodiacrangsit%2Fposts%2F1797988600363904&width=100% &show_text=false&appId=2004937082977075&height=500" width="100%" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></center>
 								</div>
 								<div class="video col">
 									<center><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fzodiacrangsit%2Fposts%2F1800169400145824&width=100% &show_text=false&appId=2004937082977075&height=500" width="100%" height="500" style="border:none;overflow:hidden" scrolling="yes" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></center>
-								</div>
-							</div> 						
+								</div>-->
+												
 					</div>
 				</section>
 
